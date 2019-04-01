@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "goldenaid",
+            "nativeLanguage": "es"
+        },
+        "jhipsterVersion": "5.8.1",
+        "applicationType": "monolith",
+        "baseName": "tst",
+        "packageName": "goldenaid",
+        "packageFolder": "goldenaid",
+        "serverPort": "8080",
+        "authenticationType": "session",
+        "cacheProvider": "hazelcast",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Memory",
+        "prodDatabaseType": "postgresql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "gradle",
+        "enableSwaggerCodegen": true,
+        "rememberMeKey": "161ff3dd3de53693513d94acda49134f746e368b9fdfd89f0c48113abcb4f817b0086094c6e606f8d8159e00eb3fa4d174c9",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["gatling", "cucumber", "protractor"],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "es",
+        "languages": ["es", "en"]
+    }
+}
