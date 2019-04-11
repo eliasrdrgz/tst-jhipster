@@ -1,0 +1,30 @@
+apiVersion: skaffold/v1beta2
+kind: Config
+build:
+  artifacts:
+  - image: changeme
+    context: .
+    docker: {}
+  tagPolicy:
+    envTemplate:
+      template: '{{.DOCKER_REGISTRY}}/eliasrdrgz/tst-jhipster:{{.VERSION}}'
+  local: {}
+deploy:
+  kubectl: {}
+profiles:
+- name: dev
+  build:
+    artifacts:
+    - docker: {}
+    tagPolicy:
+      envTemplate:
+        template: '{{.DOCKER_REGISTRY}}/eliasrdrgz/tst-jhipster:{{.DIGEST_HEX}}'
+    local: {}
+  deploy:
+    helm:
+      releases:
+      - name: tst-jhipster
+        chartPath: charts/tst-jhipster
+        setValueTemplates:
+          image.repository: '{{.DOCKER_REGISTRY}}/eliasrdrgz/tst-jhipster'
+          image.tag: '{{.DIGEST_HEX}}'
